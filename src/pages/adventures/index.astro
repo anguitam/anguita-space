@@ -1,9 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const adventures = (await getCollection('adventures')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
 ---
 <Layout title="Adventures | Martin Anguita">
   <main>
     <h1>Adventures</h1>
-    <p>List of adventures goes here.</p>
+    <ul>
+      {adventures.map((adventure) => (
+        <li>
+          <a href={`/adventures/${adventure.id}`}>{adventure.data.title}</a>
+          <p>{adventure.data.description}</p>
+        </li>
+      ))}
+    </ul>
   </main>
 </Layout>

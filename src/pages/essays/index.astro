@@ -1,9 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const essays = (await getCollection('essays')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
 ---
 <Layout title="Essays | Martin Anguita">
   <main>
     <h1>Essays</h1>
-    <p>List of essays goes here.</p>
+    <ul>
+      {essays.map((essay) => (
+        <li>
+          <a href={`/essays/${essay.id}`}>{essay.data.title}</a>
+          <p>{essay.data.description}</p>
+        </li>
+      ))}
+    </ul>
   </main>
 </Layout>
