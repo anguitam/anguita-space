@@ -19,6 +19,21 @@ export const experience = [
   },
 ];
 
+export const education = [
+  {
+    school: "Thayer School of Engineering at Dartmouth College",
+    major: "BE Mechatronics",
+    year: "2018",
+    note: "",
+  },
+  {
+    school: "Dartmouth College",
+    major: "BA Engineering Sciences",
+    year: "2016",
+    note: "",
+  },
+];
+
 export const focus = [
   "SolidWorks",
   "Python",

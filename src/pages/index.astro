@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { experience, focus } from '../data/resume';
+import { experience, education, focus } from '../data/resume';
 import { withBase } from '../lib/paths';
 ---
 
@@ -22,6 +22,7 @@ import { withBase } from '../lib/paths';
     <section class="section">
       <h2 class="section-title"><span>Summary resume</span></h2>
       <div class="resume-grid">
+
         <div class="resume-block">
           <h3 class="resume-label">Experience</h3>
           <ol class="resume-list">
@@ -35,12 +36,27 @@ import { withBase } from '../lib/paths';
             ))}
           </ol>
         </div>
+
         <div class="resume-block">
           <h3 class="resume-label">Focus</h3>
           <ul class="skill-list">
             {focus.map((s) => <li class="skill">{s}</li>)}
           </ul>
         </div>
+
+        <div class="resume-block">
+          <h3 class="resume-label">Education</h3>
+          <ol class="resume-list">
+            {education.map((e) => (
+              <li class="resume-item">
+                <p class="resume-role">{e.school}</p>
+                <p class="resume-org">{e.major}</p>
+                <p class="resume-when">{e.year}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+
       </div>
     </section>
 
