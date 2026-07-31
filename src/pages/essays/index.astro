@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import { withBase } from '../../lib/paths';
 
 const essays = (await getCollection('essays')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
@@ -12,7 +13,7 @@ const essays = (await getCollection('essays')).sort(
     <ul class="card-list">
       {essays.map((essay) => (
         <li class="card">
-          <a class="card-link" href={`/essays/${essay.id}`}>
+          <a class="card-link" href={withBase(`/essays/${essay.id}`)}>
             <span class="card-title">{essay.data.title}</span>
             <p class="card-desc">{essay.data.description}</p>
             <div class="card-meta">

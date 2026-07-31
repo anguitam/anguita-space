@@ -1,18 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { experience, focus } from '../data/resume';
+import { withBase } from '../lib/paths';
 ---
 
 <Layout title="Martín Raúl Anguita">
   <div class="wrap">
     <section class="about">
-      <img class="portrait" src="/portrait.jpg" alt="Martín Raúl Anguita" width="480" height="640" style="object-position: center 90%;" />
+      <img class="portrait" src={withBase('/portrait.jpg')} alt="Martín Raúl Anguita" width="480" height="640" style="object-position: center 90%;" />
       <div class="about-body">
         <p class="eyebrow">Hello! You have reached</p>
         <h1 class="hero-title">Martín Anguita</h1>
         <p class="lede">I like taking products from “what if?” to “it works.” My background spans engineering, defense technology, robotics, and industrial automation. I can own the journey from concept to launch, bridging engineering, manufacturing, operations, and business to turn ambitious ideas into products that simply work.</p>
         <div class="hero-actions">
-          <a class="btn" href="/projects">View projects</a>
+          <a class="btn" href={withBase('/projects')}>View projects</a>
           <a class="btn btn-quiet" href="mailto:you@example.com">Get in touch</a>
         </div>
       </div>

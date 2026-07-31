@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection, render } from 'astro:content';
+import { withBase } from '../../lib/paths';
 
 export async function getStaticPaths() {
   const essays = await getCollection('essays');
@@ -15,7 +16,7 @@ const { Content } = await render(essay);
 ---
 <Layout title={`${essay.data.title} | Martin Anguita`}>
   <div class="wrap">
-    <a class="back-link" href="/essays">&larr; Back to essays</a>
+    <a class="back-link" href={withBase('/essays')}>&larr; Back to essays</a>
     <header class="post-header">
       <h1 class="post-title">{essay.data.title}</h1>
       <div class="post-meta">
