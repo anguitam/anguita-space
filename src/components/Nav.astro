@@ -1,23 +1,31 @@
 ---
-// Prompt-style site navigation. The current page is marked with `>` and a glow.
+import ThemeToggle from './ThemeToggle.jsx';
+
 const path = Astro.url.pathname.replace(/\/+$/, '') || '/';
 
 const links = [
-  { href: '/', label: 'Home' },
-  { href: '/projects', label: 'projects' },
-  { href: '/adventures', label: 'adventures' },
-  { href: '/essays', label: 'essays' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/adventures', label: 'Adventures' },
+  { href: '/essays', label: 'Essays' },
 ];
 
-const isActive = (href: string) =>
-  href === '/' ? path === '/' : path === href || path.startsWith(href + '/');
+const isActive = (href: string) => path === href || path.startsWith(href + '/');
 ---
 
-<header class="masthead">
-  <span class="masthead__prompt"><b>martin</b>@webspace:~$</span>
-  <nav class="nav" aria-label="Primary">
-    {links.map((l) => (
-      <a href={l.href} aria-current={isActive(l.href) ? 'page' : undefined}>{l.label}</a>
-    ))}
-  </nav>
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="brand">martín<span class="brand-mark">.</span></a>
+    <nav class="nav" aria-label="Primary">
+      {links.map((l) => (
+        <a
+          href={l.href}
+          class={`nav-link${isActive(l.href) ? ' is-active' : ''}`}
+          aria-current={isActive(l.href) ? 'page' : undefined}
+        >
+          {l.label}
+        </a>
+      ))}
+      <ThemeToggle client:load />
+    </nav>
+  </div>
 </header>

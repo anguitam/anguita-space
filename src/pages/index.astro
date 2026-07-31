@@ -1,22 +1,51 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { experience, focus } from '../data/resume';
 ---
 
-<Layout title="Martin Anguita">
-  <main>
-    <section>
-      <h1>Martin Anguita</h1>
-      <p>A short intro about yourself goes here.</p>
+<Layout title="Martín Raúl Anguita">
+  <div class="wrap">
+    <section class="about">
+      <img class="portrait" src="/portrait.jpg" alt="Martín Raúl Anguita" width="480" height="640" style="object-position: center 90%;" />
+      <div class="about-body">
+        <p class="eyebrow">Hello! You have reached</p>
+        <h1 class="hero-title">Martín Anguita</h1>
+        <p class="lede">I like taking products from “what if?” to “it works.” My background spans engineering, defense technology, robotics, and industrial automation. I can own the journey from concept to launch, bridging engineering, manufacturing, operations, and business to turn ambitious ideas into products that simply work.</p>
+        <div class="hero-actions">
+          <a class="btn" href="/projects">View projects</a>
+          <a class="btn btn-quiet" href="mailto:you@example.com">Get in touch</a>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>About</h2>
-      <p>More background, skills, whatever you want on the landing page.</p>
+    <section class="section">
+      <h2 class="section-title"><span>Summary resume</span></h2>
+      <div class="resume-grid">
+        <div class="resume-block">
+          <h3 class="resume-label">Experience</h3>
+          <ol class="resume-list">
+            {experience.map((e) => (
+              <li class="resume-item">
+                <p class="resume-role">{e.role}</p>
+                <p class="resume-org">{e.org}</p>
+                <p class="resume-when">{e.when}</p>
+                <p class="resume-note">{e.note}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+        <div class="resume-block">
+          <h3 class="resume-label">Focus</h3>
+          <ul class="skill-list">
+            {focus.map((s) => <li class="skill">{s}</li>)}
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Contact</h2>
+    <section class="section">
+      <h2 class="section-title"><span>Contact</span></h2>
       <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
     </section>
-  </main>
+  </div>
 </Layout>

@@ -7,15 +7,23 @@ const adventures = (await getCollection('adventures')).sort(
 );
 ---
 <Layout title="Adventures | Martin Anguita">
-  <main>
-    <h1>Adventures</h1>
-    <ul>
+  <div class="wrap">
+    <h1 class="section-title">Adventures</h1>
+    <ul class="card-list">
       {adventures.map((adventure) => (
-        <li>
-          <a href={`/adventures/${adventure.id}`}>{adventure.data.title}</a>
-          <p>{adventure.data.description}</p>
+        <li class="card">
+          <a class="card-link" href={`/adventures/${adventure.id}`}>
+            <span class="card-title">{adventure.data.title}</span>
+            <p class="card-desc">{adventure.data.description}</p>
+            <div class="card-meta">
+              <time datetime={adventure.data.date.toISOString()}>
+                {adventure.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })}
+              </time>
+              {adventure.data.tags?.map((tag) => <span class="tag">{tag}</span>)}
+            </div>
+          </a>
         </li>
       ))}
     </ul>
-  </main>
+  </div>
 </Layout>

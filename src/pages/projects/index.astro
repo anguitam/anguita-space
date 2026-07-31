@@ -7,15 +7,23 @@ const projects = (await getCollection('projects')).sort(
 );
 ---
 <Layout title="Projects | Martin Anguita">
-  <main>
-    <h1>Projects</h1>
-    <ul>
+  <div class="wrap">
+    <h1 class="section-title">Projects</h1>
+    <ul class="card-list">
       {projects.map((project) => (
-        <li>
-          <a href={`/projects/${project.id}`}>{project.data.title}</a>
-          <p>{project.data.description}</p>
+        <li class="card">
+          <a class="card-link" href={`/projects/${project.id}`}>
+            <span class="card-title">{project.data.title}</span>
+            <p class="card-desc">{project.data.description}</p>
+            <div class="card-meta">
+              <time datetime={project.data.date.toISOString()}>
+                {project.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })}
+              </time>
+              {project.data.tags?.map((tag) => <span class="tag">{tag}</span>)}
+            </div>
+          </a>
         </li>
       ))}
     </ul>
-  </main>
+  </div>
 </Layout>
