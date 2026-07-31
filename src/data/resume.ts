@@ -1,6 +1,6 @@
 export const experience = [
   {
-    role: "roduct Manager, Autonomous Mobile Robots",
+    role: "Product Manager, Autonomous Mobile Robots",
     org: "Magna New Mobility",
     when: "2025 — Present",
     note: "Responsible for AMRs",
@@ -19,4 +19,12 @@ export const experience = [
   },
 ];
 
-export const focus = ["Skill one", "Skill two", "Skill three", "Skill four"];
+export const focus = [
+  "SolidWorks",
+  "Python",
+  "ISO 3691-4",
+  "Functional Safety",
+  "Fleet Management",
+  "Italian",
+  "Spanish",
+];
