@@ -5,7 +5,7 @@ date: 2026-08-15
 tags: ["astro", "typescript"]
 ---
 
-During solutioning, our Solutions Engineers have been having a ha allocating the correct robot to their project. Our documentation for the robots, created by our Robotics Engineers has been focused heavily on a "scientific approach" of displaying very detailed data in a way that was challening and cumbersome for our Solutions Engineering team. This calculator compiles that data, and presents it in an easy to read, low cost of interface format, cutting down the time it took tofuwhat robots to use from days and even weeks, to a simple click.
+Our Solutiones Engineers have found it challenging to decide what robot(s) to use for their projects: our documentation for the robots and their payload guidance, created by our Robotics Engineers, has been focused heavily on a "scientific approach" of displaying very detailed data in a way that was challening and cumbersome for our Solutions Engineering team to understand. I built this calculator compile that data and present it in an easy to read, low cost of interface format, that has helped cut down the time it took choose a robot to from days and even weeks, to a simple click.
 
 <iframe
   src="https://anguitam.github.io/robot-calculator/"
