@@ -1,5 +1,11 @@
 export const experience = [
   {
+    role: "Founder/Operator",
+    org: "Melrose AC",
+    when: "2026 — Present",
+    note: "Residential minisplit heat pump cleanings servicing the Melrose, MA, area.",
+  },
+  {
     role: "Product Manager, Autonomous Mobile Robots",
     org: "Magna New Mobility",
     when: "2025 — Present",
