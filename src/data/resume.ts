@@ -3,7 +3,7 @@ export const experience = [
     role: "Founder/Operator",
     org: "Melrose AC",
     when: "2026 — Present",
-    note: "Residential minisplit heat pump cleanings servicing the Melrose, MA, area.",
+    note: "Residential minisplit heat pump cleaning service for the greater Boston area.",
   },
   {
     role: "Product Manager, Autonomous Mobile Robots",
