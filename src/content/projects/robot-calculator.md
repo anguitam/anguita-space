@@ -1,6 +1,6 @@
 ---
 title: "Robot Calculator"
-description: "This is a robot allocation calculator designed to determine what robots best fit the given payloads to be moved at a plant. "
+description: "This is a robot allocation calculator designed to determine what robot(s) should be used given the payloads that will need to be moved at a plant. "
 date: 2026-08-15
 tags: ["astro", "typescript"]
 ---
