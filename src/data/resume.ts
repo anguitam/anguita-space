@@ -1,12 +1,5 @@
 export const experience = [
   {
-    role: "Founder/Operator",
-    org: "Melrose AC",
-    when: "2026 — Present",
-    note: "Residential heat-pump cleaning service for the greater Boston area.",
-  },
-
-  {
     role: "Product Manager, Autonomous Mobile Robots",
     org: "Magna New Mobility",
     when: "2025 — Present",
@@ -25,6 +18,22 @@ export const experience = [
     org: "Physical Sciences, INC (PSI)",
     when: "2020 — 2022",
     note: "Sensing hardware for DoD and DARPA: biochemical plume detection, hyperspectral imaging, magnetometric navigation, and compressive single pixel IR imaging, on drones, ROVs, UUVs, and space vehicles. Most of my work revolved around proof concept projects, prototype testing, and quick iterations through design cycles: incipient technology that will help the soldiers of tomorrow.",
+  },
+];
+
+export const venture = [
+  {
+    role: "Founder/Operator",
+    org: "Melrose AC",
+    when: "2026 — Present",
+    note: "Residential heat-pump cleaning service for the greater Boston area.",
+  },
+
+  {
+    role: "Founder",
+    org: "Van Aisen Capital",
+    when: "2025 — Present",
+    note: "Real estate investement fund focusing on value-add properties and special situations in the New England region.",
   },
 
   {

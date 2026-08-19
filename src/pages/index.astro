@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { experience, education, focus } from '../data/resume';
+import { experience, venture, education, focus } from '../data/resume';
 import { withBase } from '../lib/paths';
 ---
 
@@ -38,10 +38,17 @@ import { withBase } from '../lib/paths';
         </div>
 
         <div class="resume-block">
-          <h3 class="resume-label">Focus</h3>
-          <ul class="skill-list">
-            {focus.map((s) => <li class="skill">{s}</li>)}
-          </ul>
+          <h3 class="resume-label">Enrepreneurial Ventures</h3>
+          <ol class="resume-list">
+            {venture.map((e) => (
+              <li class="resume-item">
+                <p class="resume-role">{e.role}</p>
+                <p class="resume-org">{e.org}</p>
+                <p class="resume-when">{e.when}</p>
+                <p class="resume-note">{e.note}</p>
+              </li>
+            ))}
+          </ol>
         </div>
 
         <div class="resume-block">
@@ -55,6 +62,13 @@ import { withBase } from '../lib/paths';
               </li>
             ))}
           </ol>
+        </div>
+
+        <div class="resume-block">
+          <h3 class="resume-label">Skills</h3>
+          <ul class="skill-list">
+            {focus.map((s) => <li class="skill">{s}</li>)}
+          </ul>
         </div>
 
       </div>
