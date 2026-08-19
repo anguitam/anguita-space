@@ -1,21 +1,21 @@
 export const experience = [
   {
-    role: "Product Manager, Autonomous Mobile Robots",
+    role: "Senior Product Manager, Autonomous Mobile Robots",
     org: "Magna New Mobility",
     when: "2025 — Present",
-    note: "I own platform strategy for the robots Magna puts into its own manufacturing plants. Most of the work is making deployment less bespoke, working with the Engineering and Solutions teams to reduce deployment times to sites from months to weeks.",
+    note: "I own platform strategy for the robots Magna puts into its own manufacturing plants. Most of my work is focused on making deployments less bespoke: working with the Engineering and Solutions teams to reduce deployment times to sites from months to weeks by implementing tools and processes that speed up project turnaround.",
   },
 
   {
     role: "Product Manager",
     org: "Locus Robotics",
     when: "2022 — 2025",
-    note: "Worked on three different robotic platforms from R&D to launch, focusing on pilot deployemnts and long term roadmap requirements while putting out daily fires. Best experience was 'Foxtail,' built to replace fixed conveyor infrastructure, a quick turn-around project to prove a concept that turned into a commercial product with $6M in ARR.",
+    note: "Worked on three different robotic platforms from R&D to launch, focusing on pilot deployments and long term roadmap requirements while putting out daily fires. Best experience was 'Foxtail,' built to replace fixed conveyor infrastructure, a quick turn-around project to prove a concept that turned into a commercial product with $6M in ARR.",
   },
 
   {
     role: "Senior Research Engineer - Tactical Systems",
-    org: "Physical Sciences, INC (PSI)",
+    org: "Physical Sciences, Inc. (PSI)",
     when: "2020 — 2022",
     note: "Sensing hardware for DoD and DARPA: biochemical plume detection, hyperspectral imaging, magnetometric navigation, and compressive single pixel IR imaging, on drones, ROVs, UUVs, and space vehicles. Most of my work revolved around proof concept projects, prototype testing, and quick iterations through design cycles: incipient technology that will help the soldiers of tomorrow.",
   },
@@ -62,9 +62,11 @@ export const education = [
 export const focus = [
   "SolidWorks",
   "Python",
+  "C/C++",
   "ISO 3691-4",
   "Functional Safety",
   "Fleet Management",
+  "React",
   "Italian",
   "Spanish",
 ];
