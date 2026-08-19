@@ -30,7 +30,7 @@ export const venture = [
   },
 
   {
-    role: "Founder",
+    role: "Founder/Managing Partner",
     org: "Van Aisen Capital",
     when: "2025 — Present",
     note: "Real estate investement fund focusing on value-add properties and special situations in the New England region.",
