@@ -400,6 +400,9 @@ main {
     border-color 150ms ease,
     background 150ms ease;
 }
+.resume-item {
+  text-decoration: none;
+}
 .resume-item:hover {
   border-color: var(--brand);
   background: var(--card-up);

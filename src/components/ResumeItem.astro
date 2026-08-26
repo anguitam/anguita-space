@@ -1,0 +1,34 @@
+---
+import { withBase } from '../lib/paths';
+
+interface Props {
+  role: string;
+  org: string;
+  when: string;
+  note?: string;
+  href?: string;
+}
+const { role, org, when, note, href } = Astro.props;
+const isExternal = href?.startsWith('http');
+const resolvedHref = href ? (isExternal ? href : withBase(href)) : undefined;
+---
+{href ? (
+  <a
+    class="resume-item"
+    href={resolvedHref}
+    target={isExternal ? '_blank' : undefined}
+    rel={isExternal ? 'noopener noreferrer' : undefined}
+  >
+    <p class="resume-role">{role}</p>
+    <p class="resume-org">{org}</p>
+    <p class="resume-when">{when}</p>
+    {note && <p class="resume-note">{note}</p>}
+  </a>
+) : (
+  <div class="resume-item">
+    <p class="resume-role">{role}</p>
+    <p class="resume-org">{org}</p>
+    <p class="resume-when">{when}</p>
+    {note && <p class="resume-note">{note}</p>}
+  </div>
+)}

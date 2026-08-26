@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { experience, venture, education, focus } from '../data/resume';
 import { withBase } from '../lib/paths';
+import ResumeItem from '../components/ResumeItem.astro';
 ---
 
 <Layout title="Martín Raúl Anguita">
@@ -28,12 +29,7 @@ import { withBase } from '../lib/paths';
           <h3 class="resume-label">Experience</h3>
           <ol class="resume-list">
             {experience.map((e) => (
-              <li class="resume-item">
-                <p class="resume-role">{e.role}</p>
-                <p class="resume-org">{e.org}</p>
-                <p class="resume-when">{e.when}</p>
-                <p class="resume-note">{e.note}</p>
-              </li>
+              <li><ResumeItem role={e.role} org={e.org} when={e.when} note={e.note} href={e.href} /></li>
             ))}
           </ol>
         </div>
@@ -42,12 +38,7 @@ import { withBase } from '../lib/paths';
           <h3 class="resume-label">Enrepreneurial Ventures</h3>
           <ol class="resume-list">
             {venture.map((e) => (
-              <li class="resume-item">
-                <p class="resume-role">{e.role}</p>
-                <p class="resume-org">{e.org}</p>
-                <p class="resume-when">{e.when}</p>
-                <p class="resume-note">{e.note}</p>
-              </li>
+              <li><ResumeItem role={e.role} org={e.org} when={e.when} note={e.note} href={e.href} /></li>
             ))}
           </ol>
         </div>
