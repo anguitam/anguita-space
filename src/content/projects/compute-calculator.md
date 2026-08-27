@@ -6,6 +6,7 @@ tags: []
 ---
 
 I built this calculator as a part of my efforts to better understand the AI market as a whole: the technology, the players, and how models are trained.
+Link: https://anguitam.github.io/gpu-sizer/
 
 <iframe
   src="https://anguitam.github.io/gpu-sizer/"
