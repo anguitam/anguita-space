@@ -1,18 +1,13 @@
 ---
-title: "Robot Calculator"
-description: "Robot allocation calculator to determine what model robot(s) should be used to move payloads at a site. "
-date: 2026-08-15
+title: "Single Pixel Underwater Imager"
+description: "3D Imager for UUV navigation and object detction. "
+date: 2022-06-10
 tags: []
 ---
 
-Our Solutiones Engineers have found it challenging to decide what robot(s) to use for their projects: our documentation for the robots and their payload guidance, created by our Robotics Engineers, has been focused heavily on a "scientific approach" of displaying very detailed data in a way that was challening and cumbersome for our Solutions Engineering team to understand. I built this calculator to compile that data and present it in an easy to read, low cost of interface format, that has helped cut down the time it took to choose a robot from days and even weeks, to a simple click.
+This imager is the result of efforts to reduce costs in 3D perception systems by concentrating all light sensing capabilities into one single pixel. A clever implementation of a DMD, along with image capturing discretazion across time rather than space, as is conventional in multi-pixel imaging arrays. This imager was designed to produce compressed, computer vision images specific, at up to 108 Hz. Laser pulse returns were captured by the single pixel to build up complex 3-dimensional images of underwater objects, as seen in the pictures below.
 
-Link: https://anguitam.github.io/robot-calculator/
-
-<iframe
-  src="https://anguitam.github.io/robot-calculator/"
-  width="100%"
-  height="1400"
-  style="border:1px solid #ddd; border-radius:8px;"
-  loading="lazy">
-</iframe>
+![Test bench calibration](./IMG_6106.jpeg)
+![Complex test piece placed in test water tank.](./IMG_7613.jpeg)
+![Head on look at complex test piece under water.](./IMG_7627.jpeg)
+![A full resolution example of a the imager scanning the complex test piece.](./single-pixel.gif)
